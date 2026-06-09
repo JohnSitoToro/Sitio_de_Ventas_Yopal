@@ -1,0 +1,80 @@
+/* Contenedor del header */
+.sites {
+  background-color: #6DC83F;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Menú principal */
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Links principales */
+.nav a, .dropdown > span {
+  text-decoration: none;
+  color: white;       /* color blanco */
+  font-weight: bold;  /* negrita igual que los demás links */
+  position: relative;
+  cursor: pointer;
+}
+
+/* Subrayado animado de los links */
+.nav a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Dropdown principal */
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Contenedor del contenido del dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #6DC83F; /* color azul uniforme */
+  min-width: 160px;
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+/* Mostrar dropdown al hacer hover o al toggle */
+.dropdown-content.show {
+  display: block;
+}
+
+/* Links dentro del dropdown */
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: white;       /* blanco para que coincida con los otros links */
+  font-weight: bold;  /* negrita */
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #2563eb; /* azul más oscuro al pasar el mouse */
+}

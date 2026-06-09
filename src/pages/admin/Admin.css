@@ -1,0 +1,27 @@
+.admin-page {
+  padding: 40px;
+  color: white;
+  min-height: 80vh;
+  text-align: center;
+}
+
+.admin-buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.admin-btn {
+  padding: 15px 25px;
+  background: #6ed943;
+  color: black;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.admin-btn:hover {
+  background: #5fc038;
+}

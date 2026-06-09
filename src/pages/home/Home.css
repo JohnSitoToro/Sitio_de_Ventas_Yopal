@@ -1,0 +1,198 @@
+/* ---- Estilos para home.css ---- */
+
+.home-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.home-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* El contenedor de la cuadrícula de productos */
+.lista-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px; /* Espacio entre las tarjetas */
+}
+
+/* Estilos de cada tarjeta de producto */
+.producto-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de la imagen */
+.producto-imagen {
+  width: 100%;
+ /* height: 200px;  Altura fija */
+  object-fit: cover;
+}
+
+/* --- ESTILOS PARA EL TEXTO (MARCA, NOMBRE, PRECIO) --- */
+
+.producto-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column; 
+  gap: 4px; /* Espacio entre las líneas de texto */
+}
+
+/* 1. Estilo para la MARCA */
+.producto-brand {
+  font-size: 0.75rem;     /* 12px - Pequeño */
+  font-weight: 500;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* 2. Estilo para el NOMBRE */
+.producto-nombre {
+  font-size: 1.1rem;      /* 17-18px */
+  font-weight: 600;
+  color: #222;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* 3. Estilo para el PRECIO */
+.producto-precio {
+  font-size: 1.25rem;     /* 20px */
+  font-weight: 700;
+  color: #00695C;          /* Verde oscuro */
+  margin-top: 8px;
+}
+
+.app-container {
+  padding: 40px;
+}
+
+/* Burbuja flotante */
+.chat-bubble {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #6DC83F;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.2s;
+}
+
+.chat-bubble:hover {
+  transform: scale(1.1);
+}
+
+/* Overlay */
+.chat-overlay {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 999;
+}
+
+/* Modal */
+.chat-modal {
+  width: 300px;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Header */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  background: #6DC83F;
+  color: white;
+  border-radius: 8px 8px 0 0;
+}
+
+.close-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: white;
+}
+
+/* Messages */
+.chat-messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  max-height: 250px;
+  padding: 10px;
+}
+
+.chat-message {
+  padding: 8px 12px;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.chat-message.user {
+  align-self: flex-end;
+  background: #daf5ff;
+}
+
+.chat-message.bot {
+  align-self: flex-start;
+  background: #eee;
+}
+
+/* Input area */
+.chat-input-area {
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.chat-input-area button {
+  padding: 6px 10px;
+  border: none;
+  background: #00bcd4;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chat-input-area button:hover {
+  background: #009e88;
+}

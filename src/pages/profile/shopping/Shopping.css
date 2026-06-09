@@ -1,0 +1,138 @@
+
+.cart-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.cart-container h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.cart-container h3 {
+  color: #444;
+}
+
+.line {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 25px 0;
+}
+
+.product-item,
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f8f8;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: background 0.2s ease;
+}
+
+.product-item:hover,
+.cart-item:hover {
+  background: #efefef;
+}
+
+.btn-add,
+.btn-finish,
+.qty-btn {
+  border: none;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn-add {
+  background: #007bff;
+  color: white;
+}
+
+.btn-add:hover {
+  background: #0064cc;
+}
+
+.btn-finish {
+  background: #28a745;
+  color: white;
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.btn-finish:hover {
+  background: #218838;
+}
+
+.qty-btn {
+  background: #ddd;
+  padding: 6px 10px;
+  font-weight: bold;
+}
+
+.qty-btn:hover {
+  background: #ccc;
+}
+
+.qty-display {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.receipt-box {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.receipt-box h2 {
+  color: #222;
+}
+
+.receipt-item {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+  .product-item,
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .qty-btn {
+    margin: 5px 5px 0 0;
+  }
+}
+/* Imagen más pequeña en carrito y lista */
+.cart-product-image {
+  width: 60px;   /* ancho reducido */
+  height: 60px;  /* altura fija */
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.btn-delete-cart {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-delete-cart:hover {
+  background-color: #c0392b;
+}
