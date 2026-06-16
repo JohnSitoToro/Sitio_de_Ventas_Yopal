@@ -1,0 +1,29 @@
+name: Sitio Ventas Yopal Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  validation:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Revisar calidad de código
+        run: npm run lint
+
+      - name: Generar build
+        run: npm run build
