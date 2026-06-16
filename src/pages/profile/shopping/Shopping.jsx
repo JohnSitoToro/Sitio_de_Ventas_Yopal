@@ -52,7 +52,7 @@ export default function ShoppingCart() {
     setCart(cart.filter((item) => item.id !== id));
   };
 
-  const total = cart.reduce((acc, item) => acc + item.price * item.qty, 0
+  const total = cart.reduce((acc, item) => acc + item.price * item.qty, 0);
 
   const { addReceipt } = useReceipts();
 
