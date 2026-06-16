@@ -72,6 +72,7 @@ export default function ShoppingCart() {
     };
 
     addReceipt(receiptData);
+    setReceipt(receiptData);
     setCart([]);
     alert(
       "¡Compra finalizada con éxito!\n\n" +
