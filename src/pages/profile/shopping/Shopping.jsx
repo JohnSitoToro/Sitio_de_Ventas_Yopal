@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Shopping.css";
 import { useReceipts } from "../notification/context/ReceiptContext";
-import { useNavigate } from "react-router-dom";
 
 // Importamos productos creados desde Admin
 import { useProductos } from "../../admin/context/ProductosContext";
@@ -56,7 +55,6 @@ export default function ShoppingCart() {
   const total = cart.reduce((acc, item) => acc + item.price * item.qty, 0);
 
   const { addReceipt } = useReceipts();
-  const navigate = useNavigate();
 
   const finalizePurchase = () => {
     if (cart.length === 0) {
