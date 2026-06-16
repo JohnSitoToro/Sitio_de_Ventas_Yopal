@@ -5,14 +5,16 @@ on:
     branches:
       - main
 
-jobs:
+  pull_request:
+    branches:
+      - main
 
-  validation:
+jobs:
+  build:
 
     runs-on: ubuntu-latest
 
     steps:
-
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
@@ -22,7 +24,7 @@ jobs:
       - name: Instalar dependencias
         run: npm install
 
-      - name: Revisar calidad de código
+      - name: Revisar calidad
         run: npm run lint
 
       - name: Generar build
